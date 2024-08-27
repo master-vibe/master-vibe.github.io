@@ -17,7 +17,7 @@ const projects = [
   {
     title: "Clock App",
     cardImage: "assets/images/project-page/clock.png",
-    description: "The Clock app is a modern and feature-rich Flutter application that allows users to set and manage alarms. With a sleek new design in version 2, it provides an intuitive interface to enhance user experience.",
+    description: "The Clock app is a modern and feature-rich Flutter application that allows users to set and manage alarms.",
     tagimg:
       "https://camo.githubusercontent.com/888e388801f947dec7c3d843942c277af25fe2b1aed1821542c4e711f210312a/68747470733a2f2f75706c6f61642e77696b696d656469612e6f72672f77696b6970656469612f636f6d6d6f6e732f7468756d622f632f63332f507974686f6e2d6c6f676f2d6e6f746578742e7376672f37363870782d507974686f6e2d6c6f676f2d6e6f746578742e7376672e706e67",
     Previewlink: "",
@@ -28,7 +28,7 @@ const projects = [
 // function for rendering project cards data
 const showCards = () => {
   let output = "";
-  projects.forEach(({ title, cardImage, Previewlink, Githublink }) => {
+  projects.forEach(({ title, cardImage, description,Previewlink, Githublink }) => {
     output += `       
         <div class="column skill-card card" style="margin: 15px"data-aos="zoom-in-up" data-aos-easing="linear" data-aos-delay="300" data-aos-duration="600" >
           <div class="wrapper" style="background: url(${cardImage}) center / cover no-repeat;">
@@ -38,6 +38,7 @@ const showCards = () => {
               <div class="content">
               <div class="title-div">
                 <h1 class="title"><a href="#">${title}</a></h1>
+                <p id="description_project95" style="font-size: 18px;">${description}</p>
                 </div>
             <ul class="menu-content"><br>
                   <li><a href="${Previewlink}" class="social-icon"><svg xmlns="http://www.w3.org/2000/svg" width="30" height="25" viewBox="0 0 30 28" fill="none" stroke="#fff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="feather feather-monitor"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect><line x1="8" y1="21" x2="16" y2="21"></line><line x1="12" y1="17" x2="12" y2="21"></line></svg></a></li>
